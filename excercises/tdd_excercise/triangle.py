@@ -34,21 +34,27 @@ class Triangle:
     
     @property
     def area(self):
-         pass
+         return (self.base * self.height)*.5
     
     #@property
     #def perimiter(self):
     #     pass
     
-    def __eq__(self, value):
-         pass
+    def __eq__(self, other):
+        return self.height == other.height and self.base == other.base
     
-    def __lt__(self, value):
-         pass
     
-    def __gt__(self, value):
-         pass
+    def __lt__(self, other):
+         return self.area<other.area
+    
+    def __le__(self, other):
+         return self.area<=other.area
+    
+    def __gt__(self, other):
+         return self.area>other.area
+    
+    def __ge__(self, other):
+         return self.area>=other.area
     
     def __repr__(self):
-         pass
-
+         return f"Triangle(base = {self.base}, height = {self.height})"
